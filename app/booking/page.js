@@ -62,8 +62,8 @@ const page = () => {
   }, []);
   return (
     <main className="flex flex-col min-h-svh justify-center gap-12 p-12">
-      <section className="container flex items-center mx-auto gap-12">
-        <div className="flex-1 container ">
+      <section className="container flex items-center mx-auto gap-12 flex-col lg:flex-row">
+        <div className="flex-1 ">
           <div className="flex flex-1 justify-center rounded-lg">
             <Calendar
               mode="single"
@@ -73,7 +73,7 @@ const page = () => {
             />
           </div>
         </div>
-        <div className="flex-1 text-center justify-center rounded-lg p-12 border-[1px] border-gray-200 gap-10 flex flex-col ">
+        <div className="flex-1 text-center justify-center rounded-lg p-12 min-w-72 border-[1px] border-gray-200 gap-10 flex flex-col ">
           <h1 className="font-semibold text-xl">Pitch 1</h1>
           <ul className="flex flex-col gap-4">
             {Object.keys(pitch1Bookings).map((timeSlot, index) => (
@@ -91,7 +91,7 @@ const page = () => {
             ))}
           </ul>
         </div>
-        <div className="flex-1 text-center border-[1px] border-gray-200 justify-center rounded-lg p-12 gap-10 flex flex-col">
+        <div className="flex-1 text-center border-[1px] border-gray-200 min-w-72 justify-center rounded-lg p-12 gap-10 flex flex-col">
           <h1 className="font-semibold text-xl">Pitch 2</h1>
           <ul className="flex flex-col gap-4">
             {Object.keys(pitch2Bookings).map((timeSlot, index) => (
